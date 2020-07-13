@@ -12,7 +12,6 @@ struct FileSelectorView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             FileSelectorView(allowedFileTypes: ["txt"], url: .constant(nil))
-
             FileSelectorView(allowedFileTypes: ["txt"], url: .constant(URL(fileURLWithPath: "/Users/Guest/Test.txt")))
         }
     }
