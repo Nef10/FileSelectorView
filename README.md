@@ -9,13 +9,13 @@ A small Swift UI Package with one View to select a file.
 Simple example:
 
 ```
-    @State private var fileURL: URL?
+@State private var fileURL: URL?
+...
+var body: some View {
     ...
-    var body: some View {
-        ...
-        FileSelectorView(allowedFileTypes: ["txt", "md"], url: self.$fileURL)
-        ...
-    }
+    FileSelectorView(allowedFileTypes: ["txt", "md"], url: self.$fileURL)
+    ...
+}
 ```
 
 With a label in the body:
@@ -31,7 +31,19 @@ var body: some View {
 }
 ```
 
+Do disable a button (for example the continue button in a form) until a file is selected:
+```
+    Button("Continue") { ... }
+    .disabled(fileURL == nil)
+```
+
 You can check out the complete documentation [here](https://nef10.github.io/FileSelectorView/).
+
+## Screenshots
+
+| No file selected | File selected | File selected with label |
+|      :---:       |     :---:     |            :---:         |
+| <img height="70" alt="Screen Shot 2020-07-13 at 18 58 30" src="https://user-images.githubusercontent.com/4551135/87371866-1d16d780-c53b-11ea-880a-a327ce5a8b34.png"> | <img height="70" alt="Screen Shot 2020-07-13 at 18 59 38" src="https://user-images.githubusercontent.com/4551135/87371872-1e480480-c53b-11ea-9ffe-1261b62a592a.png"> | <img height="70" alt="Screen Shot 2020-07-13 at 18 59 45" src="https://user-images.githubusercontent.com/4551135/87371874-1e480480-c53b-11ea-97cc-9d42bb36b8ea.png"> |
 
 ## Include
 
