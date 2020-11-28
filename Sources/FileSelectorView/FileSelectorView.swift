@@ -8,16 +8,6 @@
 
 import SwiftUI
 
-struct FileSelectorView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            FileSelectorView(allowedFileTypes: ["txt"], url: .constant(nil))
-
-            FileSelectorView(allowedFileTypes: ["txt"], url: .constant(URL(fileURLWithPath: "/Users/Guest/Test.txt")))
-        }
-    }
-}
-
 /// A view which allows the user to select a file
 ///
 /// If a file is selected it shows the file name as well as a button to change the file.
@@ -60,6 +50,16 @@ public struct FileSelectorView: View {
             if response == .OK {
                 self.url = openPanel.url
             }
+        }
+    }
+}
+
+struct FileSelectorView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            FileSelectorView(allowedFileTypes: ["txt"], url: .constant(nil))
+
+            FileSelectorView(allowedFileTypes: ["txt"], url: .constant(URL(fileURLWithPath: "/Users/Guest/Test.txt")))
         }
     }
 }
