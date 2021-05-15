@@ -17,6 +17,9 @@ let package = Package(
     targets: [
         .target(
             name: "FileSelectorView",
-            dependencies: [])
+            dependencies: []),
+        .testTarget(
+            name: "FileSelectorViewTests",
+            dependencies: ["FileSelectorView"]),
     ]
 )
