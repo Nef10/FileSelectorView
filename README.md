@@ -24,7 +24,7 @@ With a label in the body:
 var body: some View {
     ...
      HStack(alignment: .firstTextBaseline) {
-        Text("Text file:")
+        Text("Document:")
         FileSelectorView(allowedFileTypes: ["txt", "md"], url: self.$fileURL)
     }
     ...
