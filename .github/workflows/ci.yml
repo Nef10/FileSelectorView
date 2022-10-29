@@ -56,7 +56,7 @@ jobs:
         echo ${{ github.event.number }} > ./pr/NR
     - name: Generate test coverage report
       if: ${{ matrix.os == needs.get_os.outputs.coverage_os }}
-      uses: maxep/spm-lcov-action@0.3.1
+      uses: Nef10/spm-lcov-action@ad1231d191e5b6d4713fa53b552d3e117ebd5ce4
       with:
         output-file: ./pr/lcov.info
     - name: Upload Coverage Information for Comment
