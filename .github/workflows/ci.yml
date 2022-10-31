@@ -18,7 +18,7 @@ jobs:
     - name: Check and output correct matrix
       id: output_data
       run: |
-        macos='macOS-latest'
+        macos='macOS-11'
         if [ -e .github/macos_version.txt ]
         then
             macos=$(cat ./.github/macos_version.txt)
