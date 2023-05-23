@@ -27,7 +27,7 @@ public struct FileSelectorView: View {
                 Text("Please select...").italic()
             }
             Button("Choose file") {
-                self.selectFile()
+                selectFile()
             }
         }
     }
@@ -48,7 +48,7 @@ public struct FileSelectorView: View {
         openPanel.allowedFileTypes = allowedFileTypes
         openPanel.begin { response in
             if response == .OK {
-                self.url = openPanel.url
+                url = openPanel.url
             }
         }
     }
